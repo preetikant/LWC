@@ -1,0 +1,28 @@
+<template>
+    <c-p2c-carousal-component 
+        carousel-details={carouselData}
+    >
+    </c-p2c-carousal-component>
+    <c-p2c-alert-component 
+        message = "Hello World"
+        card-heading="This si my Card Heading"
+        number = 29
+         is-valid =  false         
+        >  <!--is valid in cabob case -->
+    </c-p2c-alert-component>
+
+    <lightning-card class="Parent to child communication">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                type="number" 
+                label="Enter percentage"
+                onkeyup={changeHandler}
+                value ={percentagv}
+            ></lightning-input>
+            <div class="slds-var-m-bottom_medium"></div>          
+            <c-p2c-progress-component>
+                progress-value = {percentagv}
+            </c-p2c-progress-component>
+        </div>
+    </lightning-card>   
+</template>
